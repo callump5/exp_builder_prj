@@ -26,4 +26,7 @@ urlpatterns = [
 
     # Account views
     url(r'', include('accounts.urls')),
+
+    # Jobs
+    url(r'', include('jobs.urls')),
 ]
