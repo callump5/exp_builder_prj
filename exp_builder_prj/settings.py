@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_forms_bootstrap',
     'home',
+    'accounts',
+    'django_forms_bootstrap',
 
 ]
 
@@ -139,4 +140,7 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
+
+
+LOGIN_REDIRECT_URL = 'home'
 

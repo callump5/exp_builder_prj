@@ -21,8 +21,9 @@ from home import views as home_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    # Home views
-    url(r'^$', home_views.home),
+    # Home view
+    url(r'^$', home_views.home, name='home'),
 
     # Account views
+    url(r'', include('accounts.urls')),
 ]

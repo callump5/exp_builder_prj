@@ -1,20 +1,17 @@
 /* Fonts */
 
 
-h1, h2, h3, h4, a, button, th, text, p{
+h1, h2, h3, h4, a, button, th, text, p, label{
     color: #000000;
     font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
     font-size: 2em;
-    padding-bottom: 5px;
 }
 
 p {
     font-size: 1.2em;
-    padding-bottom: 5px;
-    padding-left: 5px;
 }
 
 
@@ -45,6 +42,7 @@ body {
     background-color: #3ab19e;
     opacity: 0.9;
     position: absolute;
+    top: 0;
     right: 0;
     min-height: 100vh;
 }
@@ -89,6 +87,10 @@ ul li a {
 #main  h1 {
     text-align: right;
 }
+#main p {
+    padding: 0 15px;
+    text-align: justify;
+}
 
 img {
     height: 75vh;
@@ -115,5 +117,26 @@ button.btn {
 button:first-child {
     margin-right: 10px;
 }
+
+
+/* Signup */
+#signup-h {
+    margin-bottom: 7.5px;
+}
+.control-label {
+    float: left;
+    margin: 2.5px 0;
+}
+
+li, .help-block {
+    display: none;
+}
+
+#signup {
+    float: right;
+}
+
+
+
 
 
