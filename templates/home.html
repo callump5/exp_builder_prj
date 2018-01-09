@@ -2,13 +2,13 @@
 
 {% block content %}
 
-    <div id="main">
-        <span id="image"></span>
-    <div>
-        <h1>Need some work done?</h1>
-        <p>Help someone build their portfolio by posting a project!</p>
-        <button>Post a job</button>
-        <button>Job list</button>
-    </div>
-    </div>
+        <div id="main" class="row">
+            <img class="col-sm-8" src="/static/imgs/portfolio.jpg">
+
+            <div id="landing" class="col-sm-4">
+
+                {% block landing %}
+                {% endblock %}
+            </div>
+        </div>
 {% endblock %}
