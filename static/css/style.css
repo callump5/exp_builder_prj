@@ -49,6 +49,7 @@ body {
 
 #sidebar:hover {
     transition: ease .6s;
+    transition-delay: .6s;
     width: 170px;
 }
 
@@ -87,9 +88,9 @@ ul li a {
 #main  h1 {
     text-align: right;
 }
-#main p {
-    padding: 0 15px;
-    text-align: justify;
+#main p, #button {
+    padding-left: 50px;
+    margin-top: 10px;
 }
 
 img {
@@ -109,9 +110,8 @@ img {
 #button {
     display: flex;
     justify-content: center;
-    margin-top: 2vh;
 }
-button.btn {
+button.btn, #regbutton {
     background-color: #F7CB80;
 }
 button:first-child {

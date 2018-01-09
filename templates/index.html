@@ -33,17 +33,28 @@
 
             <div class="nav-container">
 
-                <h1 class="navbar-brand">Exp Builder</h1>
+                <h1 class="navbar-brand">
+                    {% if user.is_active %}
+                        {{ user.username }}
+                    {% else %}
+                        Exp Builder
+                    {% endif %}
+                </h1>
                 <ul class="nav">
                     <li><a href="/"><span class="glyphicon glyphicon-home"></span>Home</a></li>
 
                     {% if user.is_active %}
                         <li><a href="/"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+                        <li><a href=""><span class="glyphicon glyphicon-inbox"></span>Messages</a></li>
+                        <li><a href=""><span class="glyphicon glyphicon-briefcase"></span>Jobs</a></li>
+                        <li><a href=""><span class="glyphicon glyphicon-book"></span>Archives</a></li>
+                        <li><a href=""><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
                         <li><a href="/logout/"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
                     {% else %}
                         <li><a href="/signup/"><span class="glyphicon glyphicon-envelope"></span>Register</a></li>
                         <li><a href="/login/"><span class="glyphicon glyphicon-user"></span>Login</a></li>
                     {% endif %}
+                    <li><a href="/login/"><span class="glyphicon glyphicon-eye-open"></span>How it works</a></li>
                 </ul>
             </div>
         </nav>
