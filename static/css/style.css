@@ -1,7 +1,7 @@
 /* Fonts */
 
 
-h1, h2, h3, h4, a, button, th, text, p, label{
+h1, h2, h3, h4, a, button, th, td, text, p, label{
     color: #000000;
     font-family: 'Montserrat', sans-serif;
 }
@@ -16,10 +16,15 @@ p {
 
 
 /* Index Styling */
-
+#logo {
+    margin-top: 10px;
+    margin-left: 80px;
+    z-index: 100;
+}
 
 body {
     overflow-x: hidden;
+    background-color: #3BBAA7;
 }
 
 #wrapper {
@@ -93,7 +98,7 @@ ul li a {
     margin-top: 10px;
 }
 
-img {
+#landingimg {
     height: 75vh;
     width: 70vw;
     margin: 0 2vw 0 4vw;
@@ -111,10 +116,10 @@ img {
     display: flex;
     justify-content: center;
 }
-button.btn, #regbutton {
+button.btn, a.btn {
     background-color: #F7CB80;
 }
-button:first-child {
+a:first-child {
     margin-right: 10px;
 }
 
@@ -128,14 +133,48 @@ button:first-child {
     margin: 2.5px 0;
 }
 
-li, .help-block {
-    display: none;
-}
-
 #signup {
     float: right;
 }
 
+.form-control {
+    background-color: #F7CB80;
+}
+
+
+/* Job List Table */
+
+.header {
+    margin-top: 10px;
+}
+.table{
+    margin-top: 15px;
+    background-color: #3ab19e;
+    border-radius: 10px;
+    opacity: 0.9;
+    padding-bottom: 10px;
+}
+
+.joblist {
+    width: 100%;
+}
+.joblist th {
+    padding: 5px 0;
+    font-size: 1.5em;
+}
+.joblist td {
+    font-size: 1.3em;
+}
+.joblist td span {
+    padding: 5px 12.5px;
+}
+
+.joblist tr:last-child{
+    padding-bottom: 10px;
+}
+.joblist td:first-child {
+    width: 40px;
+}
 
 
 

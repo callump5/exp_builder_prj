@@ -1,4 +1,11 @@
 {% extends 'home.html' %}
+
+    {% block head_js %}
+        $(document).ready(function() {
+            $('.has-popover').popover({'trigger':'hover'});
+        });
+    {% endblock %}
+
     {% block landing %}
         {% load bootstrap_tags %}
         <h1 id="signup-h">Sign Up Today</h1>
@@ -6,6 +13,6 @@
             {% csrf_token %}
             {{ form | as_bootstrap }}
 
-        <button  id="signup" class="btn" type="submit">Register</button>
+        <button  id="signup" class="mybutton btn" type="submit">Register</button>
         </form>
     {% endblock %}

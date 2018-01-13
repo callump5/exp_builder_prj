@@ -8,10 +8,16 @@ from django.dispatch import receiver
 
 # Create your models here.
 
+class Profession(models.Model):
+    title = models.CharField(max_length=100)
+
+    def __unicode__(self):
+        return self.title
+
 class Profile(models.Model):
     user = models.OneToOneField(User, related_name='user_profile')
     bio = models.TextField(max_length=500, blank=True)
-    profession = models.CharField(max_length=200)
+    profession = models.ForeignKey(Profession, related_name='user_profile')
 
     def __unicode__(self):
-        return self.user.get_full_name()
+        return self.user.get_full_name().title()
