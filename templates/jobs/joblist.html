@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+    <h1 class="header">Job Posts</h1>
+    <div class="table">
+        <table class="joblist">
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th>Title</th>
+                    <th>Sector</th>
+                    <th>Status</th>
+                </tr>
+
+                {% for job in jobs %}
+                    {% if job.status.pk == 1 or 2  %}
+
+                        <tr>
+                            <td><span class="glyphicon glyphicon-file"></span> </td>
+                            <td><a href="{% url 'jobpost' job.id %}">{{ job.title.title }}</a></td>
+                            <td>{{ job.category.title }}</td>
+                            <td>{{ job.status }}</td>
+                        </tr>
+                    {% endif %}
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+    </div>
+
+{% endblock %}
+

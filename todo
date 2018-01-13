@@ -1,0 +1,4 @@
+1) job list apply button:
+    adds user id to job foreign key to track applicants
+2) archives to display closed jobs for user
+3) work out message system between accepted applicants 

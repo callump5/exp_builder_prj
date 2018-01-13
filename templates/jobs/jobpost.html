@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <h1 class="header">{{ jobpost.title.title }}</h1>
+    <p>Category: {{ jobpost.category }} | Author: {{ jobpost.user }}</p>
+
+    <br>
+
+    <p>
+    {{ jobpost.description }}
+    </p>
+
+{% endblock %}
