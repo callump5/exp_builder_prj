@@ -1,8 +1,25 @@
 {% extends 'index.html' %}
 
+{% block head_js %}
+    $(document).ready(function() {
+        $(".trow")
+            .mouseover(function () {
+                $(this).find('td').css("background-color", "white" )
+            })
+            .click(function () {
+                $(location).attr('href', $(this).find('td').find('a').attr('href'))
+            })
+            .mouseleave(function () {
+                $(this).find('td').css({"background-color": "#3ab19e", "opacity": "0.9"});
+            });
+    });
+{% endblock %}
 
 {% block content %}
-    <h1 class="header">Job Posts</h1>
+    <div class="header">
+        <span class="glyphicon glyphicon-briefcase"></span>
+        <h1>Job Posts</h1>
+    </div>
     <div class="table">
         <table class="joblist">
             <tbody>
@@ -15,13 +32,14 @@
 
                 {% for job in jobs %}
                     {% if job.status.pk == 1 or 2  %}
-
-                        <tr>
-                            <td><span class="glyphicon glyphicon-file"></span> </td>
+                        <tr class="spacer"><td></td></tr>
+                        <tr class="trow">
+                            <td><span class="glyphicon glyphicon-blackboard"></span> </td>
                             <td><a href="{% url 'jobpost' job.id %}">{{ job.title.title }}</a></td>
                             <td>{{ job.category.title }}</td>
                             <td>{{ job.status }}</td>
                         </tr>
+                        <tr class="spacer"><td></td></tr>
                     {% endif %}
 
                 {% endfor %}

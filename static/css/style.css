@@ -1,13 +1,17 @@
 /* Fonts */
 
 
-h1, h2, h3, h4, a, button, th, td, text, p, label{
-    color: #000000;
+h1, h2, h3, h4, a, button, th, td, text, p, label, span{
+    color: #353636;
     font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
     font-size: 2em;
+}
+
+th {
+    font-size: 1.8em;
 }
 
 p {
@@ -145,16 +149,49 @@ a:first-child {
 /* Job List Table */
 
 .header {
-    margin-top: 10px;
+    margin:15px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    font-size: 1.5em;
 }
-.table{
+.header span {
+    font-size: 1.8em;
+    margin-right: 20px;
+}
+.table {
     margin-top: 15px;
-    background-color: #3ab19e;
-    border-radius: 10px;
-    opacity: 0.9;
     padding-bottom: 10px;
 }
 
+.trow td:first-child {
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.trow td:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.trow td {
+    background-color: #3ab19e;
+    padding: 5px 0;
+    cursor: pointer;
+}
+.trow td:last-child {
+    padding-right: 10px;
+    text-align: right;
+}
+.trow td a {
+    text-decoration: none;
+}
+.trow td a:hover {
+    color: black;
+}
+.spacer {
+    height: 10px
+}
 .joblist {
     width: 100%;
 }
@@ -177,5 +214,8 @@ a:first-child {
 }
 
 
+/* Job Post */
 
-
+.jobpost {
+    margin-left: 25px;
+}

@@ -1,14 +1,17 @@
 {% extends 'index.html' %}
 
 {% block content %}
+    <div class="header">
 
-    <h1 class="header">{{ jobpost.title.title }}</h1>
-    <p>Category: {{ jobpost.category }} | Author: {{ jobpost.user }}</p>
+        <h1>{{ jobpost.title.title }}</h1>
+    </div>
 
-    <br>
+    <div class="jobpost">
 
-    <p>
-    {{ jobpost.description }}
-    </p>
+        <p>Category: {{ jobpost.category }} | Author: {{ jobpost.user }}</p>
 
+        <br>
+
+        <p>{{ jobpost.description }}</p>
+    </div>
 {% endblock %}
